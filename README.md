@@ -1,9 +1,10 @@
 ## Welcome to the ProSys Blog
 Here you can read about ongoing research at our research center in the field of Process Systems Engineering.
 
-### Articles
+### Blog Articles
 
-[Oleochemical Processes](url) and ![Image](src)
+[Oleochemical Processes](url)
+<!---[Image](src)--->
 
 ### Contact
 

@@ -1,9 +1,23 @@
 pipeline:
   hugo:
     image: cbrgm/drone-hugo:latest
+    buildDrafts: true
+    buildExpired: true
+    buildFuture: true
     config: /config
     content: /content/
     output: /public
     source: /source
     theme: /themes/THEMENAME/
     validate: true
+    when:
+      branch: [ master ]
+  publish:
+    image: appleboy/drone-scp
+    secrets: [ ssh_username, ssh_password ]
+    host: cbrgm.de
+    username: webuser
+    password: xxxxxxx
+    port: 54321
+    target: /var/www/ # Path to your web directory
+    source: site/* # Copy all files from output path

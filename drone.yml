@@ -1,0 +1,9 @@
+pipeline:
+  hugo:
+    image: cbrgm/drone-hugo:latest
+    config: /config
+    content: /content/
+    output: /public
+    source: /source
+    theme: /themes/THEMENAME/
+    validate: true
